@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marianna & Radoslav – Svadba</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f6efe9;
+      color: #3a3a3a;
+      text-align: center;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    h1 { font-size: 42px; }
+    h2 { font-size: 30px; }
+    h3 { font-size: 24px; }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 12px 0;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: #b06a7c;
+      margin: 20px auto;
+    }
+
+    .date {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* Hero image */
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 18px;
+      margin-bottom: 40px;
+    }
+
+    /* Countdown */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .countdown div {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 12px;
+      min-width: 90px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .countdown span {
+      font-size: 26px;
+      font-weight: 600;
+      display: block;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 16px;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #b06a7c;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .bus-info {
+      margin-top: 16px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .party {
+      padding: 40px 20px 60px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO OBRÁZOK -->
+  <section class="hero">
+    <img src="hero.png" alt="Svadobná pozvánka Marianna a Radoslav">
+  </section>
+
+  <!-- ÚVOD -->
+  <section>
+    <h1>Marianna Černejová<br>&<br>Radoslav Kvasnica</h1>
+    <div class="divider"></div>
+    <p>Ľúbime sa, berieme sa!</p>
+    <p class="date"><strong>22. augusta 2026</strong></p>
+    <p>ÁNO si povieme o 15:00 v kostole sv. Ondreja v Bolešove</p>
+  </section>
+
+  <!-- Pozvanie -->
+  <section>
+    <h2>Srdečne Vás pozývame k svadobnému stolu! 🥂</h2>
+  </section>
+
+  <!-- ODPOČET -->
+  <section>
+    <h3>Do svadby zostáva</h3>
+    <div class="countdown" id="countdown">
+      <div><span id="days">0</span>dní</div>
+      <div><span id="hours">0</span>hodín</div>
+      <div><span id="minutes">0</span>minút</div>
+      <div><span id="seconds">0</span>sekúnd</div>
+    </div>
+  </section>
+
+  <!-- BLIŽŠIE INFORMÁCIE + TEXTY -->
+  <section>
+    <h2>Bližšie informácie</h2>
+    
+    <p>Budeme radi, ak potvrdíte svoju účasť.</p>
+
+    <div class="divider"></div>
+
+    <p>
+      Namiesto hľadania ideálnych darov budeme vďační za príspevok
+      na náš spoločný zážitok na svadobnej ceste.
+    </p>
+
+    <div class="divider"></div>
+
+    <p>
+      Zároveň Vás chceme poprosiť o vyplnenie krátkeho dotazníka
+      ohľadom stravy a prípadných obmedzení:
+    </p>
+    <p>
+      <a href="https://docs.google.com/forms/d/1SoEQ3JGLa1dgx_o41tpQtMKZQZ5_lBlYipozb-z3UWo/edit" target="_blank">
+        Vyplniť dotazník o strave
+      </a>
+    </p>
+  </section>
+
+  <!-- OBRAD -->
+  <section>
+    <h3>Sobášny obrad</h3>
+    <p><strong>Kostol sv. Ondreja</strong><br>Bolešov</p>
+    <iframe src="https://www.google.com/maps?q=Kostol%20sv.%20Ondreja%20Bolešov&output=embed"></iframe>
+    <p class="bus-info">
+      Svadobný autobus pôjde po svätej omši z kostola sv. Ondreja
+      na miesto konania svadobnej hostiny.
+    </p>
+  </section>
+
+  <!-- HOSTINA -->
+  <section>
+    <h3>Svadobná hostina</h3>
+    <p><strong>Atrium</strong><br>Trenčianska Teplá</p>
+    <iframe src="https://www.google.com/maps?q=Atrium%20Trenčianska%20Teplá&output=embed"></iframe>
+  </section>
+
+  <div class="party">
+    Tešíme sa na spoločnú párty!
+  </div>
+
+  <script>
+    const weddingDate = new Date("2026-08-22T15:00:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = weddingDate - now;
+      if (diff < 0) return;
+
+      document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      document.getElementById("minutes").innerText = Math.floor((diff / (1000 * 60)) % 60);
+      document.getElementById("seconds").innerText = Math.floor((diff / 1000) % 60);
+    }, 1000);
+  </script>
+
+</body>
+</html>
